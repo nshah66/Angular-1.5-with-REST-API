@@ -1,0 +1,18 @@
+<div ng-repeat='doc in docs'>
+  <md-card md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch >
+    <md-card-title>
+      <md-card-title-text>
+        <span class="md-headline">{{doc.name}}</span>
+        <span class="md-subhead">{{doc.description}}</span>
+        <span class="md-subhead">createdBy: {{doc.createdBy}}</span>
+
+      </md-card-title-text>
+      <md-card-title-media>
+        <div class="md-media-sm card-media"><img src="doc.imgs.url"></div>
+      </md-card-title-media>
+    </md-card-title>
+    <md-card-actions layout="row" layout-align="end center">
+      <md-button ng-click="onClick(doc)">Edit</md-button>
+    </md-card-actions>
+  </md-card>
+</div>

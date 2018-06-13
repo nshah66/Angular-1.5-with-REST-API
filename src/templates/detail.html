@@ -1,0 +1,96 @@
+<div  layout="column" ng-cloak class="md-inline-form">
+
+  <md-content layout-padding>
+    <div ng-if="isEdit">
+      <form name="docForm">
+
+        <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Name</label>
+            <input ng-model="item.name">
+          </md-input-container>
+
+        </div>
+
+        <md-input-container class="md-block">
+          <label>Description</label>
+          <textarea ng-model="item.description" md-maxlength="50" rows="2" md-select-on-focus></textarea>
+        </md-input-container>
+
+        <div>
+        	<md-card>
+			    <md-card-title>
+			      <md-card-title-text>
+			        <span class="md-headline">Image URLs</span>
+			        
+			      </md-card-title-text>
+			    </md-card-title>
+
+			    <md-card-content>
+			      <div layout="row">
+			        <md-input-container class="md-block" flex-gt-md>
+			          <label>URL</label>
+			          <textarea ng-model="item.imgs[0].url" md-maxlength="150"></textarea> 
+			        </md-input-container>
+			       </div>
+			        <input class="ng-hide" id="input-file-id" multiple type="file" />
+					<label for="input-file-id" class="md-button md-raised md-primary">+</label>
+			      
+			    </md-card-content>
+			</md-card>
+        </div>
+        <div style="float: right;">
+        	<md-button type="button" ng-click="goBack()">Back</md-button>
+	        <md-button type="submit">Submit</md-button>
+	    </div>
+
+      </form>
+    </div>
+    <div ng-if="!isEdit">
+      <form name="newForm">
+
+        <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Name</label>
+            <input ng-model="item.name">
+          </md-input-container>
+
+        </div>
+
+        <md-input-container class="md-block">
+          <label>Description</label>
+          <textarea ng-model="item.description" md-maxlength="50" rows="2" md-select-on-focus></textarea>
+        </md-input-container>
+
+        <div>
+        	<md-card>
+			    <md-card-title>
+			      <md-card-title-text>
+			        <span class="md-headline">Image URLs</span>
+			        
+			      </md-card-title-text>
+			    </md-card-title>
+
+			    <md-card-content>
+			      <div layout="row">
+			        <md-input-container class="md-block" flex-gt-md>
+			          <label>URL</label>
+			          <textarea ng-model="item.imgs[0].url" md-maxlength="150"></textarea> 
+			        </md-input-container>
+			       </div>
+			        <input class="ng-hide" id="input-file-id" multiple type="file" />
+					<label for="input-file-id" class="md-button md-raised md-primary">+</label>
+			      
+			    </md-card-content>
+			</md-card>
+        </div>
+        <div style="float: right;">
+        	<md-button type="button" ng-click="goBack()">Back</md-button>
+	        <md-button type="submit">Submit</md-button>
+	    </div>
+
+      </form>
+    </div>
+  </md-content>
+
+</div>
