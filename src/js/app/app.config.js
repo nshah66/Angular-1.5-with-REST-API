@@ -16,7 +16,7 @@ angular.module('code').
 						template: "<main-page></main-page>"
 					}).
 					when("/table", {
-						templateUrl: "/templates/main-table.html"
+						template: "<table-page></table-page>"
 					}).
 					when("/detail", {
 						template: "<detail-page></detail-page>"

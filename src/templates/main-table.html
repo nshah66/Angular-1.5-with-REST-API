@@ -1,1 +1,23 @@
-<h1>this is table view!</h1>
+
+<div class="container">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Description</th>
+				<th>Image</th>
+				<th>Created By</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="doc in docs">
+				<td>{{doc.name}}</td>
+				<td>{{doc.description}}</td>
+				<td>{{doc.imgs[0].url}}</td>
+				<td>{{doc.createdBy}}</td>
+				<td><button class="btn btn-danger" ng-click="deleteDoc(doc._id)">Delete</button></td>
+			</tr>
+		</tbody>
+	</table>
+</div>

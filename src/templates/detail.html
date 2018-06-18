@@ -2,7 +2,7 @@
 
   <md-content layout-padding>
     <div ng-if="isEdit">
-      <form name="docForm">
+      <form name="docForm" ng-submit="updateDoc()">
 
         <div layout-gt-sm="row">
           <md-input-container class="md-block" flex-gt-sm>
@@ -33,8 +33,8 @@
 			          <textarea ng-model="item.imgs[0].url" md-maxlength="150"></textarea> 
 			        </md-input-container>
 			       </div>
-			        <input class="ng-hide" id="input-file-id" multiple type="file" />
-					<label for="input-file-id" class="md-button md-raised md-primary">+</label>
+			        <!-- <input class="ng-hide" id="input-file-id" multiple type="file" />
+					<label for="input-file-id" class="md-button md-raised md-primary">+</label> -->
 			      
 			    </md-card-content>
 			</md-card>
@@ -47,19 +47,19 @@
       </form>
     </div>
     <div ng-if="!isEdit">
-      <form name="newForm">
+      <form name="newForm" ng-submit="createDoc()">
 
         <div layout-gt-sm="row">
           <md-input-container class="md-block" flex-gt-sm>
             <label>Name</label>
-            <input ng-model="item.name">
+            <input ng-model="new.name">
           </md-input-container>
 
         </div>
 
         <md-input-container class="md-block">
           <label>Description</label>
-          <textarea ng-model="item.description" md-maxlength="50" rows="2" md-select-on-focus></textarea>
+          <textarea ng-model="new.description" md-maxlength="50" rows="2" md-select-on-focus></textarea>
         </md-input-container>
 
         <div>
@@ -75,11 +75,11 @@
 			      <div layout="row">
 			        <md-input-container class="md-block" flex-gt-md>
 			          <label>URL</label>
-			          <textarea ng-model="item.imgs[0].url" md-maxlength="150"></textarea> 
+			          <textarea ng-model="new.url" md-maxlength="150"></textarea> 
 			        </md-input-container>
 			       </div>
-			        <input class="ng-hide" id="input-file-id" multiple type="file" />
-					<label for="input-file-id" class="md-button md-raised md-primary">+</label>
+			        <!-- <input class="ng-hide" id="input-file-id" multiple type="file" />
+					<label for="input-file-id" class="md-button md-raised md-primary">+</label> -->
 			      
 			    </md-card-content>
 			</md-card>
